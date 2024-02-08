@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmxopk0bpddu2"]
+
+[ext_resource type="Script" path="res://enemy.gd" id="1_dmcyp"]
+[ext_resource type="Texture2D" uid="uid://b62n665xc3r7d" path="res://icon.svg" id="2_kpb8w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wou1j"]
+
+[node name="enemy" type="Node"]
+script = ExtResource("1_dmcyp")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1.19209e-07, 1.19209e-07)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_kpb8w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("CircleShape2D_wou1j")
+debug_color = Color(0.980392, 0, 0, 0.419608)

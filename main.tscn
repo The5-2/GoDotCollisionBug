@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn2h8m4a5p555"]
+
+[ext_resource type="PackedScene" uid="uid://onv28fipyuce" path="res://main_char.tscn" id="1_c2mx8"]
+[ext_resource type="PackedScene" uid="uid://cmxopk0bpddu2" path="res://enemy.tscn" id="2_s4qgk"]
+
+[node name="main" type="Node2D"]
+
+[node name="mainChar" parent="." instance=ExtResource("1_c2mx8")]
+
+[node name="enemy" parent="." instance=ExtResource("2_s4qgk")]
+startPos = Vector2(150, 150)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(150, 150)
+zoom = Vector2(2, 2)
